@@ -126,13 +126,13 @@ dinner.deleteRecipe(recipe2)
 //User Prompt Stuff
 console.log(`\n ${myFirstCookbook.name}\n`)
 console.log(`Table of Contents`)
-console.log(`\nBREAKFAST)
+console.log(`\nBREAKFAST`)
 breakfast.displayCategory(breakfast)
-console.log(`\nLUNCH)
+console.log(`\nLUNCH`)
 lunch.displayCategory(lunch)
-console.log(`\nDINNER)
+console.log(`\nDINNER`)
 dinner.displayCategory(dinner)
-console.log(`\nDESSERT)
+console.log(`\nDESSERT`)
 dessert.displayCategory(dessert)
 
 

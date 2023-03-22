@@ -32,10 +32,11 @@ class RecipeList{
     //METHOD - Displays recipe names by category
     displayCategory(recipeList){
         //console.log(this.recipes.length)
-        console.log('')
+        
         for(let i = 0;i<this.recipes.length;i++){
-            console.log(this.recipes[i].name)
+            console.log(this.recipes[i].name + "       " + (i+1))
         }
+        console.log('')
     }
    
        
