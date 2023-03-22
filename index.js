@@ -18,7 +18,7 @@ import RecipeBook from "./RecipeBook.js";
 
 
 //adding a new recipe instance
-let jackfruitTacos = new Recipe('Jackfruit Tacos', 'Dinner',true,'40 min',['Bag of Pre-cooked Young Jackfruit','1 medium Purple Onion','2 Garlic Cloves','1 pint Heirloom Tomatoes','1 Green Pepper','1 Red Pepper','Taco Seasonings','Shredded Purple Cabbage','Cilantro Garlic Aioli', 'Taco Shells','Fresh Cilantro'],
+let recipe1 = new Recipe('Recipe1', 'Dinner',true,'40 min',['Bag of Pre-cooked Young Jackfruit','1 medium Purple Onion','2 Garlic Cloves','1 pint Heirloom Tomatoes','1 Green Pepper','1 Red Pepper','Taco Seasonings','Shredded Purple Cabbage','Cilantro Garlic Aioli', 'Taco Shells','Fresh Cilantro'],
 ['1. On a baking sheet, lay out one layer of shredded jackfruit and dehydrate 15 minutes to dry out',
 '2. While jackfruit is drying, chop onion, garlic, peppers, and tomatoes',
 '3. Saute onions, garlic, and peppers until soft.',
@@ -28,7 +28,7 @@ let jackfruitTacos = new Recipe('Jackfruit Tacos', 'Dinner',true,'40 min',['Bag 
 '7. While mixture is cooking, warm up taco shells in oven at 325 for 5 minutes.',
 '8. Time to prepare the tacos! In a shell, layer jackfruit mixture and shredded cabbage,top with aioli and fresh cilantro garnish.'])
 
-//console.log(jackfruitTacos)
+//console.log(recipe1)
 
 let recipe2 = new Recipe('Recipe2', 'Dinner',true,'40 min',['Bag of Pre-cooked Young Jackfruit','1 medium Purple Onion','2 Garlic Cloves','1 pint Heirloom Tomatoes','1 Green Pepper','1 Red Pepper','Taco Seasonings','Shredded Purple Cabbage','Cilantro Garlic Aioli', 'Taco Shells','Fresh Cilantro'],
 ['1. On a baking sheet, lay out one layer of shredded jackfruit and dehydrate 15 minutes to dry out',
@@ -101,7 +101,7 @@ let dinner = new RecipeList('Dinner',[],[])
 let dessert = new RecipeList('Dessert',[],[])
 
 //assigning recipes to lists
-dinner.assignRecipe(jackfruitTacos)
+dinner.assignRecipe(recipe1)
 dinner.assignRecipe(recipe2)
 dinner.assignRecipe(recipe3)
 dinner.assignRecipe(recipe4)
@@ -124,19 +124,107 @@ dinner.deleteRecipe(recipe2)
 
 
 //User Prompt Stuff
-console.log(`\n ${myFirstCookbook.name}\n`)
-console.log(`Table of Contents`)
-console.log(`\nBREAKFAST`)
-breakfast.displayCategory(breakfast)
-console.log(`\nLUNCH`)
-lunch.displayCategory(lunch)
-console.log(`\nDINNER`)
-dinner.displayCategory(dinner)
-console.log(`\nDESSERT`)
-dessert.displayCategory(dessert)
+let bookIntro = () =>{
+  //User Menu
+  console.log(`1. View Table of Contents`)
+  console.log(`2. Add a recipe`)
+  console.log(`3. Delete a recipe`)
+  let menuSelection = prompt(console.log(`\nEnter the number for your selection: `))
+  switch (menuSelection){
+    //table of contents
+    case '1':
+      //clears console
+      console.clear()
+      tableOfContents()
+      break
+    //add a recipe
+    case '2':
+      console.clear()
+      intakeRecipe()
+      
+      break
+    //delete a recipe
+    case '3':
+      console.clear()
+      
+      break
+    default:
+      break
+  }
+  
+}
+
+let intakeRecipe = () => {
+  let inName = prompt('Name of recipe: ')
+  //console.log(inName)
+  let category
+  //why is this re-prompting once I put in a number?
+  let inCategory = prompt('1.Breakfast \n2.Lunch \n3.Dinner \n4.Dessert \n\nEnter the number for your selection: ')
+  
+  switch (inCategory){
+    case '1':
+      category = 'Breakfast'
+      break
+    case '2':
+      category = 'Lunch'
+      break
+    case '3':
+      category = 'Dinner'
+      break
+    case '4':
+      category = 'Dessert'
+      break
+    default:
+    break
+  }
+  
+  //gathering isVegan
+  let vegan = prompt('Is it vegan? y/n: ')
+  let isVegan
+  if(vegan === 'y'){
+    isVegan = true
+  }
+  else{
+    isVegan = false
+  }
+
+  //gatherin cookingTime
+  let cookTime = prompt('Enter the cooking time in minutes: ')
+  let cookingTime = `${cookTime} min`
+  console.log(cookingTime)
+  
+  //gathering ingredients
+  let ingred = prompt('Please enter ingredients, separated by commas: ')
+  ingred = ingred.split(',')
+
+  //gathering directions
+  let directions = prompt('Please enter directions, numbered and separated by commas: ')
+  directions = directions.split(',')
+  console.log(directions)
+
+  //how do i generically call this something to use the let recipe#
+  //=new Recipe...
+  
+
+}
 
 
+let tableOfContents = () =>{
+  //Table of Contents
+  console.log(`\n ${myFirstCookbook.name}\n`)
+  console.log(`Table of Contents\t\tPage`)
+  console.log(`\nBREAKFAST`)
+  breakfast.displayCategory(breakfast)
+  console.log(`\nLUNCH`)
+  lunch.displayCategory(lunch)
+  console.log(`\nDINNER`)
+  dinner.displayCategory(dinner)
+  console.log(`\nDESSERT`)
+  dessert.displayCategory(dessert)
+}
 
+
+bookIntro()
 let recipeName = prompt('What is the name of the recipe?: ')
 
 

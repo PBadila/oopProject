@@ -32,9 +32,24 @@ class RecipeList{
     //METHOD - Displays recipe names by category
     displayCategory(recipeList){
         //console.log(this.recipes.length)
-        
+        //console.log(recipeList)
         for(let i = 0;i<this.recipes.length;i++){
-            console.log(this.recipes[i].name + "       " + (i+1))
+            //console.log(recipeList.name)
+            switch(recipeList.name){
+                // \t is tab 
+                case 'Breakfast':
+                    console.log(this.recipes[i].name + "\t\t\t\t" + "b"+(i+1))
+                    break
+                case 'Lunch':
+                    console.log(this.recipes[i].name + "\t\t\t\t" + "l"+(i+1))
+                    break
+                case 'Dinner':
+                    console.log(this.recipes[i].name + "\t\t\t\t" + "d"+(i+1))
+                    break
+                case 'Dessert':
+                    console.log(this.recipes[i].name + "\t\t\t\t" + "de"+(i+1))
+                    break
+            }
         }
         console.log('')
     }
