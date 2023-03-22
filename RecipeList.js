@@ -1,6 +1,7 @@
 class RecipeList{
 
     //CONSTRUCTOR
+    //holds the recipes on separate lists, depending  on food type
     constructor(name,recipes = []){
         this.name = name
         this.recipes = recipes   
@@ -9,54 +10,35 @@ class RecipeList{
     //METHOD: puts recipe in recipe list
     assignRecipe(recipe){
         this.recipes.push(recipe)
-        console.log(this.recipes.indexOf(recipe))
+        //console.log('Assigning recipe here')
+        //console.log(this.recipes.indexOf(recipe))
+        console.log(`\nYou have added ${recipe.name}.`)
+        //console.log('Testing RecipeList')
+        //console.log(this.recipes)
     }
     
     //METHOD: deletes recipe from the list
     deleteRecipe(recipe){
+        //console.log('deleting recipe here')
         let delIndex = this.recipes.indexOf(recipe)
-        console.log(recipe.name)
-        console.log(`The index of ${recipe.name} is ${delIndex}`)
+        //console.log(recipe.name)
+        //console.log(`The index of ${recipe.name} is ${delIndex}`)
         this.recipes.splice(delIndex,1)
-        console.log(`From deleteRecipe after deleting`)
-        console.log(this.recipes)
+        //console.log(`From deleteRecipe after deleting`)
+        //console.log(this.recipes)
+        console.log(`\nYou have deleted ${recipe.name} from My First Cookbook.`)
     }
 
-    //METHOD: displays requested recipe      
-    displayRecipe(recipe){
-            /** console.log('display recipe')
-            console.log(Object.keys(recipe).length)
-            console.log(recipe.name)
-            console.log(typeof(recipe[name]))*/
-            for(let i = 0;i<Object.keys(recipe).length;i++){
-                if(i===0){
-                    
-                    console.log(`Recipe for `+ recipe.name)
-                }
-                else if(i===2){
-                    console.log ('VEGAN')
-                }
-                else if(i===3){
-                    console.log(`Cooking Time: ` + recipe.cookingTime)
-                }
-                else if(i===4){
-                    console.log(`Ingredients:`)
-                    
-                    for(let j = 0; j<recipe.ingredients.length;j++){
-                        console.log(`~ `+ recipe.ingredients[j])
-                    }
-                }
-                else if(i===5){
-                    console.log('Cooking Instructions: ')
-                    console.log(recipe.directions.length)
-                    for(let x = 0; x<recipe.directions.length;x++){
-                        console.log(`* ` + recipe.directions[x])
-                    }
-                }
-            }
-            
+    //METHOD - Displays recipe names by category
+    displayCategory(recipeList){
+        //console.log(this.recipes.length)
+        console.log('')
+        for(let i = 0;i<this.recipes.length;i++){
+            console.log(this.recipes[i].name)
         }
-        
+    }
+   
+       
 }
 
 
