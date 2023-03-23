@@ -56,15 +56,15 @@ class RecipeList{
     }
    //METHOD - check to see if a recipe is on a list
    checkList(recipe){
-    console.log(`recipe`+recipe)
-    console.log(`length`+this.recipes.length)
+    //console.log(`recipe`+recipe)
+    //console.log(`length`+this.recipes.length)
     for(let i=0;i<this.recipes.length;i++){
-        console.log(`this.recipe[i].name`+this.recipes[i].name)
+        //console.log(`this.recipe[i].name`+this.recipes[i].name)
         if(recipe===this.recipes[i].name.toLowerCase()){
-            console.log(`found it`)
+            //console.log(`found it`)
             let delIndex = this.recipes.indexOf(recipe)
             this.recipes.splice(delIndex,1)
-            console.log(`\nYou have deleted ${recipe[i].name} from My First Cookbook.`)
+            console.log(`\nYou have deleted ${recipe} from My First Cookbook.`)
             return true
         
         }

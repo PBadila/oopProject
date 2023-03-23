@@ -131,12 +131,8 @@ let bookIntro = () =>{
   console.log(`2. Add a recipe`)
   console.log(`3. Delete a recipe`)
   let menuSelection = prompt(`\nEnter the number for your selection: `)
-  if(menuSelection===1){
-    //clears console
-    console.clear()
-    tableOfContents()
-  }
-  /***switch (menuSelection){
+
+  switch (menuSelection){
     //table of contents
     case '1':
       //clears console
@@ -157,7 +153,7 @@ let bookIntro = () =>{
       break
     default:
       break
-  } */
+  } 
   
 }
 
