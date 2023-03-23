@@ -120,17 +120,23 @@ myFirstCookbook.assignRecipeList(breakfast)
 myFirstCookbook.displayRecipe(recipe5)
 
 //deleting a recipe
-dinner.deleteRecipe(recipe2)
+//dinner.deleteRecipe(recipe2)
 
 
 //User Prompt Stuff
 let bookIntro = () =>{
   //User Menu
+  console.clear()
   console.log(`1. View Table of Contents`)
   console.log(`2. Add a recipe`)
   console.log(`3. Delete a recipe`)
-  let menuSelection = prompt(console.log(`\nEnter the number for your selection: `))
-  switch (menuSelection){
+  let menuSelection = prompt(`\nEnter the number for your selection: `)
+  if(menuSelection===1){
+    //clears console
+    console.clear()
+    tableOfContents()
+  }
+  /***switch (menuSelection){
     //table of contents
     case '1':
       //clears console
@@ -146,11 +152,12 @@ let bookIntro = () =>{
     //delete a recipe
     case '3':
       console.clear()
+      eraseRecipe()
       
       break
     default:
       break
-  }
+  } */
   
 }
 
@@ -177,7 +184,7 @@ let intakeRecipe = () => {
     default:
     break
   }
-  
+
   //gathering isVegan
   let vegan = prompt('Is it vegan? y/n: ')
   let isVegan
@@ -188,7 +195,7 @@ let intakeRecipe = () => {
     isVegan = false
   }
 
-  //gatherin cookingTime
+  //gathering cookingTime
   let cookTime = prompt('Enter the cooking time in minutes: ')
   let cookingTime = `${cookTime} min`
   console.log(cookingTime)
@@ -202,9 +209,32 @@ let intakeRecipe = () => {
   directions = directions.split(',')
   console.log(directions)
 
-  //how do i generically call this something to use the let recipe#
-  //=new Recipe...
-  
+  //adding the recipe to a list
+  let recipe = new Recipe(inName,category,isVegan,cookingTime,ingred,directions)
+  console.log(recipe)
+  switch (category){
+    case 'Breakfast':
+      breakfast.assignRecipe(recipe)
+      console.log('assigned to breakfast')
+      console.log(breakfast.recipes)
+      break
+    case 'Lunch':
+      lunch.assignRecipe(recipe)
+      console.log('assigned to lunch')
+      console.log(lunch.recipes)
+      break
+    case 'Dinner':
+      dinner.assignRecipe(recipe)
+      console.log('assigned to dinner')
+      console.log(lunch.recipes)
+      break
+    case 'Dessert':
+      dessert.assignRecipe(recipe)
+      console.log('assigned to dessert')
+      console.log(lunch.recipes)
+      break
+
+  }
 
 }
 
@@ -223,11 +253,68 @@ let tableOfContents = () =>{
   dessert.displayCategory(dessert)
 }
 
+//deleting recipes from a list
+let eraseRecipe = () =>{
+
+  tableOfContents()
+  //let check
+  let eraseRec = prompt('Please enter the name of the recipe you would like to delete: ')
+
+  //check = breakfast.checkList(eraseRec)
+  //console.log(`Now look here`+ check)
+  if(breakfast.checkList(eraseRec)===true){
+    console.log(`Breakfast item deleted.`)
+  }
+  else if(lunch.checkList(eraseRec)===true){
+    console.log('Lunch item deleted.')
+  }
+  else if(dinner.checkList(eraseRec)===true){
+    console.log('Dinner item deleted.')
+  }
+  else{
+    console.log('No item to delete.')
+  }
+}
+
+ 
+  /*** 
+  let pageCheck=0
+  
+  let eraseNum = prompt('Please enter the page of the recipe you would like to delete: ')
+  while(pageCheck != 1){
+  if(eraseNum.startsWith('b')){
+    //check breakfast
+    breakfast.checkList(recipe)
+    pageCheck=1
+
+  }
+  else if(eraseNum.startsWith('l')){
+    //check lunch
+    lunch.checkList(recipe)
+    pageCheck=1
+  }
+  else if(eraseNum.startsWith('d')){
+    //check dinner
+    dinner.checkList(recipe)
+    pageCheck=1
+  }
+  else{
+    console.log('That is not a valid page number.')
+  }
+}
+*/
+  //need to find the name in a list
+  //need to id the category 
+  //need to figure out how to pass that onto the method
+  //dinner.deleteRecipe(recipe2)
+
+//}
 
 bookIntro()
 let recipeName = prompt('What is the name of the recipe?: ')
 
+myFirstCookbook.displayRecipe(recipe5)
 
-
+dinner.checkList(recipe5)
 
 
