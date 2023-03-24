@@ -38,7 +38,7 @@ let recipe2 = new Recipe('Recipe2', 'Dinner',true,'40 min',['Bag of Pre-cooked Y
 '5. Mix taco seasonings with 1/4 cup water and add to jackfruit.',
 '6. Add in chopped tomatoes and continue to cook for 10 minutes.',
 '7. While mixture is cooking, warm up taco shells in oven at 325 for 5 minutes.',
-'8. Time to prepare the tacos! In a shell, layer jackfruit mixture and shredded cabbage,top with aioli and fresh cilantro garnish.'])
+'8. In a shell, layer jackfruit mixture and shredded cabbage,top with aioli and fresh cilantro garnish.'])
 
 
 let recipe3 = new Recipe('Recipe3', 'Dinner',true,'40 min',['Bag of Pre-cooked Young Jackfruit','1 medium Purple Onion','2 Garlic Cloves','1 pint Heirloom Tomatoes','1 Green Pepper','1 Red Pepper','Taco Seasonings','Shredded Purple Cabbage','Cilantro Garlic Aioli', 'Taco Shells','Fresh Cilantro'],
@@ -49,9 +49,9 @@ let recipe3 = new Recipe('Recipe3', 'Dinner',true,'40 min',['Bag of Pre-cooked Y
 '5. Mix taco seasonings with 1/4 cup water and add to jackfruit.',
 '6. Add in chopped tomatoes and continue to cook for 10 minutes.',
 '7. While mixture is cooking, warm up taco shells in oven at 325 for 5 minutes.',
-'8. Time to prepare the tacos! In a shell, layer jackfruit mixture and shredded cabbage,top with aioli and fresh cilantro garnish.'])
+'8. In a shell, layer jackfruit mixture and shredded cabbage,top with aioli and fresh cilantro garnish.'])
 
-let recipe4 = new Recipe('Recipe4', 'Dinner',false,'40 min',['Bag of Pre-cooked Young Jackfruit','1 medium Purple Onion','2 Garlic Cloves','1 pint Heirloom Tomatoes','1 Green Pepper','1 Red Pepper','Taco Seasonings','Shredded Purple Cabbage','Cilantro Garlic Aioli', 'Taco Shells','Fresh Cilantro'],
+let recipe4 = new Recipe('Recipe4', 'Lunch',false,'40 min',['Bag of Pre-cooked Young Jackfruit','1 medium Purple Onion','2 Garlic Cloves','1 pint Heirloom Tomatoes','1 Green Pepper','1 Red Pepper','Taco Seasonings','Shredded Purple Cabbage','Cilantro Garlic Aioli', 'Taco Shells','Fresh Cilantro'],
 ['1. On a baking sheet, lay out one layer of shredded jackfruit and dehydrate 15 minutes to dry out',
 '2. While jackfruit is drying, chop onion, garlic, peppers, and tomatoes',
 '3. Saute onions, garlic, and peppers until soft.',
@@ -59,7 +59,7 @@ let recipe4 = new Recipe('Recipe4', 'Dinner',false,'40 min',['Bag of Pre-cooked 
 '5. Mix taco seasonings with 1/4 cup water and add to jackfruit.',
 '6. Add in chopped tomatoes and continue to cook for 10 minutes.',
 '7. While mixture is cooking, warm up taco shells in oven at 325 for 5 minutes.',
-'8. Time to prepare the tacos! In a shell, layer jackfruit mixture and shredded cabbage,top with aioli and fresh cilantro garnish.'])
+'8. In a shell, layer jackfruit mixture and shredded cabbage,top with aioli and fresh cilantro garnish.'])
 
 let recipe5 = new Recipe('Recipe5', 'Breakfast',false,'40 min',['Bag of Pre-cooked Young Jackfruit','1 medium Purple Onion','2 Garlic Cloves','1 pint Heirloom Tomatoes','1 Green Pepper','1 Red Pepper','Taco Seasonings','Shredded Purple Cabbage','Cilantro Garlic Aioli', 'Taco Shells','Fresh Cilantro'],
 ['1. On a baking sheet, lay out one layer of shredded jackfruit and dehydrate 15 minutes to dry out',
@@ -69,7 +69,7 @@ let recipe5 = new Recipe('Recipe5', 'Breakfast',false,'40 min',['Bag of Pre-cook
 '5. Mix taco seasonings with 1/4 cup water and add to jackfruit.',
 '6. Add in chopped tomatoes and continue to cook for 10 minutes.',
 '7. While mixture is cooking, warm up taco shells in oven at 325 for 5 minutes.',
-'8. Time to prepare the tacos! In a shell, layer jackfruit mixture and shredded cabbage,top with aioli and fresh cilantro garnish.'])
+'8. In a shell, layer jackfruit mixture and shredded cabbage,top with aioli and fresh cilantro garnish.'])
 
 
 let recipe6 = new Recipe('Recipe6', 'Breakfast',false,'40 min',['Bag of Pre-cooked Young Jackfruit','1 medium Purple Onion','2 Garlic Cloves','1 pint Heirloom Tomatoes','1 Green Pepper','1 Red Pepper','Taco Seasonings','Shredded Purple Cabbage','Cilantro Garlic Aioli', 'Taco Shells','Fresh Cilantro'],
@@ -80,7 +80,7 @@ let recipe6 = new Recipe('Recipe6', 'Breakfast',false,'40 min',['Bag of Pre-cook
 '5. Mix taco seasonings with 1/4 cup water and add to jackfruit.',
 '6. Add in chopped tomatoes and continue to cook for 10 minutes.',
 '7. While mixture is cooking, warm up taco shells in oven at 325 for 5 minutes.',
-'8. Time to prepare the tacos! In a shell, layer jackfruit mixture and shredded cabbage,top with aioli and fresh cilantro garnish.'])
+'8. In a shell, layer jackfruit mixture and shredded cabbage,top with aioli and fresh cilantro garnish.'])
 
 let recipe7 = new Recipe('Recipe7', 'Breakfast',false,'40 min',['Bag of Pre-cooked Young Jackfruit','1 medium Purple Onion','2 Garlic Cloves','1 pint Heirloom Tomatoes','1 Green Pepper','1 Red Pepper','Taco Seasonings','Shredded Purple Cabbage','Cilantro Garlic Aioli', 'Taco Shells','Fresh Cilantro'],
 ['1. On a baking sheet, lay out one layer of shredded jackfruit and dehydrate 15 minutes to dry out',
@@ -90,7 +90,7 @@ let recipe7 = new Recipe('Recipe7', 'Breakfast',false,'40 min',['Bag of Pre-cook
 '5. Mix taco seasonings with 1/4 cup water and add to jackfruit.',
 '6. Add in chopped tomatoes and continue to cook for 10 minutes.',
 '7. While mixture is cooking, warm up taco shells in oven at 325 for 5 minutes.',
-'8. Time to prepare the tacos! In a shell, layer jackfruit mixture and shredded cabbage,top with aioli and fresh cilantro garnish.'])
+'8. In a shell, layer jackfruit mixture and shredded cabbage,top with aioli and fresh cilantro garnish.'])
 
 
 
@@ -98,13 +98,13 @@ let recipe7 = new Recipe('Recipe7', 'Breakfast',false,'40 min',['Bag of Pre-cook
 let breakfast = new RecipeList('Breakfast',[],[])
 let lunch = new RecipeList("Lunch",[],[])
 let dinner = new RecipeList('Dinner',[],[])
-let dessert = new RecipeList('Dessert',[],[])
+
 
 //assigning recipes to lists
 dinner.assignRecipe(recipe1)
 dinner.assignRecipe(recipe2)
 dinner.assignRecipe(recipe3)
-dinner.assignRecipe(recipe4)
+lunch.assignRecipe(recipe4)
 breakfast.assignRecipe(recipe5)
 breakfast.assignRecipe(recipe6)
 breakfast.assignRecipe(recipe7)
@@ -115,21 +115,21 @@ let myFirstCookbook = new RecipeBook('My First Cookbook')
 //assigning recipe lists to book instance
 myFirstCookbook.assignRecipeList(dinner)
 myFirstCookbook.assignRecipeList(breakfast)
-
-//displaying a recipe
-myFirstCookbook.displayRecipe(recipe5)
-
-//deleting a recipe
-//dinner.deleteRecipe(recipe2)
+myFirstCookbook.assignRecipeList(lunch)
 
 
-//User Prompt Stuff
+
+
+
+
+//User Menu
 let bookIntro = () =>{
-  //User Menu
+  
   console.clear()
   console.log(`1. View Table of Contents`)
   console.log(`2. Add a recipe`)
   console.log(`3. Delete a recipe`)
+  console.log('4. Quit')
   let menuSelection = prompt(`\nEnter the number for your selection: `)
 
   switch (menuSelection){
@@ -156,13 +156,13 @@ let bookIntro = () =>{
   } 
   
 }
-
+//allowing user to input recipe
 let intakeRecipe = () => {
   let inName = prompt('Name of recipe: ')
   //console.log(inName)
   let category
   //why is this re-prompting once I put in a number?
-  let inCategory = prompt('1.Breakfast \n2.Lunch \n3.Dinner \n4.Dessert \n\nEnter the number for your selection: ')
+  let inCategory = prompt('1.Breakfast \n2.Lunch \n3.Dinner \n\nEnter the number for your selection: ')
   
   switch (inCategory){
     case '1':
@@ -174,9 +174,7 @@ let intakeRecipe = () => {
     case '3':
       category = 'Dinner'
       break
-    case '4':
-      category = 'Dessert'
-      break
+   
     default:
     break
   }
@@ -194,7 +192,7 @@ let intakeRecipe = () => {
   //gathering cookingTime
   let cookTime = prompt('Enter the cooking time in minutes: ')
   let cookingTime = `${cookTime} min`
-  console.log(cookingTime)
+  //console.log(cookingTime)
   
   //gathering ingredients
   let ingred = prompt('Please enter ingredients, separated by commas: ')
@@ -203,40 +201,39 @@ let intakeRecipe = () => {
   //gathering directions
   let directions = prompt('Please enter directions, numbered and separated by commas: ')
   directions = directions.split(',')
-  console.log(directions)
+  //console.log(directions)
 
   //adding the recipe to a list
   let recipe = new Recipe(inName,category,isVegan,cookingTime,ingred,directions)
-  console.log(recipe)
+  //console.log(recipe)
   switch (category){
     case 'Breakfast':
       breakfast.assignRecipe(recipe)
       console.log('assigned to breakfast')
-      console.log(breakfast.recipes)
+      
       break
     case 'Lunch':
       lunch.assignRecipe(recipe)
       console.log('assigned to lunch')
-      console.log(lunch.recipes)
+     
       break
     case 'Dinner':
       dinner.assignRecipe(recipe)
       console.log('assigned to dinner')
-      console.log(lunch.recipes)
+      
       break
-    case 'Dessert':
-      dessert.assignRecipe(recipe)
-      console.log('assigned to dessert')
-      console.log(lunch.recipes)
-      break
+    
 
+  }
+  let userQuit = prompt("Press q to return to menu")
+  if(userQuit==='q'){
+    bookIntro()
   }
 
 }
 
-
+//Table of Contents
 let tableOfContents = () =>{
-  //Table of Contents
   console.log(`\n ${myFirstCookbook.name}\n`)
   console.log(`Table of Contents\t\tPage`)
   console.log(`\nBREAKFAST`)
@@ -245,14 +242,21 @@ let tableOfContents = () =>{
   lunch.displayCategory(lunch)
   console.log(`\nDINNER`)
   dinner.displayCategory(dinner)
-  console.log(`\nDESSERT`)
-  dessert.displayCategory(dessert)
+  console.log(`\n\n`)
+  let tocChoice = prompt('Enter recipe choice: ' )
+  //console.log(tocChoice)
+  myFirstCookbook.displayRecipe(tocChoice)
+  if(myFirstCookbook.displayRecipe(tocChoice)=='q'){
+    bookIntro()
+  }
+ 
+
 }
 
 //deleting recipes from a list
 let eraseRecipe = () =>{
 
-  tableOfContents()
+  //tableOfContents()
   //let check
   let eraseRec = prompt('Please enter the name of the recipe you would like to delete: ')
 
@@ -270,47 +274,18 @@ let eraseRecipe = () =>{
   else{
     console.log('No item to delete.')
   }
+  let userQuit = prompt("Press q to return to menu")
+  if(userQuit==='q'){
+    bookIntro()
+  }
 }
 
  
-  /*** 
-  let pageCheck=0
-  
-  let eraseNum = prompt('Please enter the page of the recipe you would like to delete: ')
-  while(pageCheck != 1){
-  if(eraseNum.startsWith('b')){
-    //check breakfast
-    breakfast.checkList(recipe)
-    pageCheck=1
 
-  }
-  else if(eraseNum.startsWith('l')){
-    //check lunch
-    lunch.checkList(recipe)
-    pageCheck=1
-  }
-  else if(eraseNum.startsWith('d')){
-    //check dinner
-    dinner.checkList(recipe)
-    pageCheck=1
-  }
-  else{
-    console.log('That is not a valid page number.')
-  }
-}
-*/
-  //need to find the name in a list
-  //need to id the category 
-  //need to figure out how to pass that onto the method
-  //dinner.deleteRecipe(recipe2)
+//myFirstCookbook.displayRecipe(recipe5)
 
-//}
+//dinner.checkList(recipe5)
 
 bookIntro()
-let recipeName = prompt('What is the name of the recipe?: ')
-
-myFirstCookbook.displayRecipe(recipe5)
-
-dinner.checkList(recipe5)
 
 

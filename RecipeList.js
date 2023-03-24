@@ -16,19 +16,6 @@ class RecipeList{
         //console.log('Testing RecipeList')
         //console.log(this.recipes)
     }
-    /*** 
-    //METHOD: deletes recipe from the list
-    deleteRecipe(recipe){
-        //console.log('deleting recipe here')
-        let delIndex = this.recipes.indexOf(recipe)
-        //console.log(recipe.name)
-        //console.log(`The index of ${recipe.name} is ${delIndex}`)
-        this.recipes.splice(delIndex,1)
-        //console.log(`From deleteRecipe after deleting`)
-        //console.log(this.recipes)
-        console.log(`\nYou have deleted ${recipe.name} from My First Cookbook.`)
-    }
-    */
 
     //METHOD - Displays recipe names by category
     displayCategory(recipeList){
@@ -54,6 +41,7 @@ class RecipeList{
         }
         console.log('')
     }
+
    //METHOD - check to see if a recipe is on a list
    checkList(recipe){
     //console.log(`recipe`+recipe)
@@ -68,29 +56,10 @@ class RecipeList{
             return true
         
         }
-    }
+    } 
+   }
 
-    /*** 
-   if(this.recipes.includes(recipe)){
-    console.log('deleting recipe here')
-    let delIndex = this.recipes.indexOf(recipe)
-    console.log(`recipe.name`+recipe.name)
-    //console.log(`The index of ${recipe.name} is ${delIndex}`)
-    this.recipes.splice(delIndex,1)
-    //console.log(`From deleteRecipe after deleting`)
-    //console.log(this.recipes)
-    console.log(`\nYou have deleted ${recipe.name} from My First Cookbook.`)
-    return true
-   }
-   else{
-    return false
-   }
-   */
-   
-   }
+
    }
        
-
-
-
 export default RecipeList

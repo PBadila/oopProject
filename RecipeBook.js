@@ -1,3 +1,15 @@
+//! DO NOT REMOVE 
+import promptSync from 'prompt-sync'
+const prompt = promptSync(); 
+
+/**
+  Example usage to prompt a user: 
+  const name = prompt('What is your name?');
+  console.log(`Hey there ${name}`);
+
+  All user input will be read as a String, so in order to treat user input as numbers, you’ll need to convert the input:
+*/
+/////////////////////////////////////////////  WRITE YOUR CODE BELOW!!!  //////////////////////////////////////
 class RecipeBook{
 
     //CONSTRUCTOR
@@ -11,91 +23,102 @@ class RecipeBook{
     
     //METHOD: assign a recipe to a list based on the type of dish
     assignRecipeList(recipeList){
-        //console.log(recipeList.name)
 
         switch (recipeList.name){
                 case 'Breakfast':
-                    //console.log('Enjoy your breakfast')
                     this.breakfastRecipes.push(recipeList)
                     break
                 case 'Lunch':
-                    //console.log('Enjoy your lunch')
                     this.lunchRecipes.push(recipeList)
                     break
                 case 'Dinner':
-                    //console.log('Enjoy your dinner')
                     this.dinnerRecipes.push(recipeList)
-                    //console.log(`dinner recipes ${this.dinnerRecipes}`)
-                    
-                    //console.log(type0f(this.dinnerRecipes))
-                    //console.log(`These are the dinner recipes from recipe book`)
-                    //console.log(this.dinnerRecipes)
                     break
                 default:
-                    //console.log('Enjoy your dessert')
                     this.dessertRecipes.push(recipeList)
                     break
-        }
-           
+        }     
     }
-        //showRecipe(recipe){
-            //console.log(recipe)
-    //}
+    
 
     //METHOD: displays requested recipe if it is on a list    
     displayRecipe(recipe){
 
-        //console.log('Breakfast Test 2')
-        //this gives you the first recipe in the RecipeList object
-        //console.log(this.breakfastRecipes[0].recipes[0])
-        //console.log('new test')
-        //this.breakfastRecipes[0] refers to the object RecipeList
-        //that has the name and a list of recipes
-        //console.log(this.breakfastRecipes[0])
-        //console.log('test 3')
-        //this gives an array of the recipe objects in the breakfast list
-        //console.log(this.breakfastRecipes[0].recipes)
-        
-        if(this.breakfastRecipes[0].recipes.includes(recipe) ||
-            this.lunchRecipes[0].recipes.includes(recipe) ||
-            this.dinnerRecipes[0].recipes.includes(recipe) ||
-            this.dessertRecipes[0].recipes.includes(recipe)){
-
-            console.log('Yes the recipe is there')
-    
-            
-            for(let i = 0;i<Object.keys(recipe).length;i++){
-                if(i===0){
-                    
-                    console.log(`Recipe for `+ recipe.name)
+        //checking to see if recipe was found
+        let check = false
+        //forEach is a way to check an array of objects
+        //also the map method
+        this.breakfastRecipes[0].recipes.forEach(Rec =>{
+           if (Rec.name.toLowerCase() ===recipe){
+                console.clear()
+                console.log(`Recipe for `+ Rec.name)
+                console.log ('\nVEGAN')
+                console.log(`\nCooking Time: ` + Rec.cookingTime)
+                console.log(`\nIngredients:`)
+                for(let j = 0; j<Rec.ingredients.length;j++){
+                        console.log(`~ `+ Rec.ingredients[j])
                 }
-                else if(i===2){
-                    console.log ('\nVEGAN')
+                console.log('\nCooking Instructions: ')
+                for(let x = 0; x<Rec.directions.length;x++){
+                    console.log(Rec.directions[x])
                 }
-                else if(i===3){
-                    console.log(`\nCooking Time: ` + recipe.cookingTime)
-                }
-                else if(i===4){
-                    console.log(`\nIngredients:`)
-                    
-                    for(let j = 0; j<recipe.ingredients.length;j++){
-                        console.log(`~ `+ recipe.ingredients[j])
-                    }
-                }
-                else if(i===5){
-                    console.log('\nCooking Instructions: ')
-                    //console.log(recipe.directions.length)
-                    for(let x = 0; x<recipe.directions.length;x++){
-                        console.log(recipe.directions[x])
-                    }
-                }
+                check = true
             }
-            
+        })
+        //console.log(`breakfast check`+check)
+        if(check===false){
+            //check lunch now
+            this.lunchRecipes[0].recipes.forEach(Rec =>{
+                if (Rec.name.toLowerCase() ===recipe){
+                     console.clear()
+                     console.log(`Recipe for `+ Rec.name)
+                     console.log ('\nVEGAN')
+                     console.log(`\nCooking Time: ` + Rec.cookingTime)
+                     console.log(`\nIngredients:`)
+                     for(let j = 0; j<Rec.ingredients.length;j++){
+                             console.log(`~ `+ Rec.ingredients[j])
+                     }
+                     console.log('\nCooking Instructions: ')
+                     for(let x = 0; x<Rec.directions.length;x++){
+                         console.log(Rec.directions[x])
+                     }
+                 }
+             })
         }
-        else{
-            console.log('Nope, not here')
-        }
-    }
+            //console.log(`lunch check`+check)
+            if(check===false){
+                //check dinner now
+                this.dinnerRecipes[0].recipes.forEach(Rec =>{
+                    if (Rec.name.toLowerCase() ===recipe){
+                        console.clear()
+                        console.log(`Recipe for `+ Rec.name)
+                        console.log ('\nVEGAN')
+                        console.log(`\nCooking Time: ` + Rec.cookingTime)
+                        console.log(`\nIngredients:`)
+                        for(let j = 0; j<Rec.ingredients.length;j++){
+                                console.log(`~ `+ Rec.ingredients[j])
+                        }
+                        console.log('\nCooking Instructions: ')
+                        for(let x = 0; x<Rec.directions.length;x++){
+                            console.log(Rec.directions[x])
+                        }
+                    }
+                })
+            }
+            let leaveRecipe = prompt(`Press q to return to Table of Contents: `)
+            if(leaveRecipe ==='q'){
+                return 'q'
+            }
+   
+
+}
+ 
+        
+    
+        
+    
+    
+   
         
 }
 
